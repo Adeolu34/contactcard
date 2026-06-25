@@ -1,0 +1,12 @@
+# Netlify configuration for ContactCard
+# Static site: no build step needed. Files live at the repo root.
+
+[build]
+  publish = "."
+  command = ""
+
+# Serve the dashboard at the site root.
+[[redirects]]
+  from = "/"
+  to = "/dashboard.html"
+  status = 200
