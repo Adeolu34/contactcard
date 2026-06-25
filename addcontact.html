@@ -347,8 +347,8 @@
             return;
         }
         // localStorage caps at ~5MB total, so reject large images.
-        if (file.size > 2 * 1024 * 1024) {
-            alert("Image is too large. Please choose one under 2MB.");
+        if (file.size > 7 * 1024 * 1024) {
+            alert("Image is too large. Please choose one under 7MB.");
             return;
         }
 

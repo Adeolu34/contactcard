@@ -1,313 +1,349 @@
-<!DOCTYPE html><html class="light" lang="en" style="width: 1280px; height: 1024px; overflow: hidden; position: relative;"><head>
+<!DOCTYPE html>
+<html class="light" lang="en" style="width: 1280px; height: 1024px; overflow: hidden; position: relative;">
+
+<head>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <title>ContactHub - My Contacts</title>
+    <title>ContactHub - My Contacts </title>
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&amp;display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet">
     <script id="tailwind-config">
-            tailwind.config = {
-              darkMode: "class",
-              theme: {
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
                 extend: {
-                  "colors": {
-                          "inverse-primary": "#b7c4ff",
-                          "on-surface-variant": "#434656",
-                          "primary-container": "#0052ff",
-                          "tertiary-fixed-dim": "#ffb4a1",
-                          "outline": "#737688",
-                          "primary-fixed": "#dde1ff",
-                          "on-secondary": "#ffffff",
-                          "surface-container-highest": "#e0e3e5",
-                          "on-secondary-fixed-variant": "#38485d",
-                          "surface-bright": "#f7f9fb",
-                          "on-surface": "#191c1e",
-                          "on-tertiary-container": "#ffddd5",
-                          "secondary-container": "#d0e1fb",
-                          "error-container": "#ffdad6",
-                          "surface-container-low": "#f2f4f6",
-                          "on-primary-container": "#dfe3ff",
-                          "on-error-container": "#93000a",
-                          "surface-container": "#eceef0",
-                          "surface-container-high": "#e6e8ea",
-                          "secondary-fixed-dim": "#b7c8e1",
-                          "surface-tint": "#004ced",
-                          "tertiary-fixed": "#ffdbd2",
-                          "on-primary-fixed": "#001452",
-                          "error": "#ba1a1a",
-                          "tertiary": "#952200",
-                          "on-background": "#191c1e",
-                          "inverse-on-surface": "#eff1f3",
-                          "surface-dim": "#d8dadc",
-                          "outline-variant": "#c3c5d9",
-                          "surface-container-lowest": "#ffffff",
-                          "on-secondary-fixed": "#0b1c30",
-                          "background": "#f7f9fb",
-                          "tertiary-container": "#bf3003",
-                          "on-tertiary-fixed-variant": "#891e00",
-                          "primary-fixed-dim": "#b7c4ff",
-                          "on-error": "#ffffff",
-                          "inverse-surface": "#2d3133",
-                          "on-secondary-container": "#54647a",
-                          "on-primary-fixed-variant": "#0038b6",
-                          "surface-variant": "#e0e3e5",
-                          "secondary-fixed": "#d3e4fe",
-                          "secondary": "#505f76",
-                          "on-primary": "#ffffff",
-                          "on-tertiary-fixed": "#3c0800",
-                          "primary": "#003ec7",
-                          "on-tertiary": "#ffffff",
-                          "surface": "#f7f9fb"
-                  },
-                  "borderRadius": {
-                          "DEFAULT": "0.125rem",
-                          "lg": "0.25rem",
-                          "xl": "0.5rem",
-                          "full": "0.75rem"
-                  },
-                  "spacing": {
-                          "sm": "8px",
-                          "xs": "4px",
-                          "gutter": "24px",
-                          "lg": "24px",
-                          "md": "16px",
-                          "xl": "40px",
-                          "base": "4px",
-                          "container-max": "1200px"
-                  },
-                  "fontFamily": {
-                          "headline-sm": [
-                                  "Inter"
-                          ],
-                          "headline-md": [
-                                  "Inter"
-                          ],
-                          "label-md": [
-                                  "Inter"
-                          ],
-                          "body-md": [
-                                  "Inter"
-                          ],
-                          "headline-md-mobile": [
-                                  "Inter"
-                          ],
-                          "display-lg": [
-                                  "Inter"
-                          ],
-                          "body-lg": [
-                                  "Inter"
-                          ]
-                  },
-                  "fontSize": {
-                          "headline-sm": [
-                                  "20px",
-                                  {
-                                          "lineHeight": "28px",
-                                          "fontWeight": "600"
-                                  }
-                          ],
-                          "headline-md": [
-                                  "24px",
-                                  {
-                                          "lineHeight": "32px",
-                                          "letterSpacing": "-0.01em",
-                                          "fontWeight": "600"
-                                  }
-                          ],
-                          "label-md": [
-                                  "12px",
-                                  {
-                                          "lineHeight": "16px",
-                                          "letterSpacing": "0.05em",
-                                          "fontWeight": "600"
-                                  }
-                          ],
-                          "body-md": [
-                                  "14px",
-                                  {
-                                          "lineHeight": "20px",
-                                          "fontWeight": "400"
-                                  }
-                          ],
-                          "headline-md-mobile": [
-                                  "20px",
-                                  {
-                                          "lineHeight": "28px",
-                                          "fontWeight": "600"
-                                  }
-                          ],
-                          "display-lg": [
-                                  "32px",
-                                  {
-                                          "lineHeight": "40px",
-                                          "letterSpacing": "-0.02em",
-                                          "fontWeight": "700"
-                                  }
-                          ],
-                          "body-lg": [
-                                  "16px",
-                                  {
-                                          "lineHeight": "24px",
-                                          "fontWeight": "400"
-                                  }
-                          ]
-                  }
+                    "colors": {
+                        "inverse-primary": "#b7c4ff",
+                        "on-surface-variant": "#434656",
+                        "primary-container": "#0052ff",
+                        "tertiary-fixed-dim": "#ffb4a1",
+                        "outline": "#737688",
+                        "primary-fixed": "#dde1ff",
+                        "on-secondary": "#ffffff",
+                        "surface-container-highest": "#e0e3e5",
+                        "on-secondary-fixed-variant": "#38485d",
+                        "surface-bright": "#f7f9fb",
+                        "on-surface": "#191c1e",
+                        "on-tertiary-container": "#ffddd5",
+                        "secondary-container": "#d0e1fb",
+                        "error-container": "#ffdad6",
+                        "surface-container-low": "#f2f4f6",
+                        "on-primary-container": "#dfe3ff",
+                        "on-error-container": "#93000a",
+                        "surface-container": "#eceef0",
+                        "surface-container-high": "#e6e8ea",
+                        "secondary-fixed-dim": "#b7c8e1",
+                        "surface-tint": "#004ced",
+                        "tertiary-fixed": "#ffdbd2",
+                        "on-primary-fixed": "#001452",
+                        "error": "#ba1a1a",
+                        "tertiary": "#952200",
+                        "on-background": "#191c1e",
+                        "inverse-on-surface": "#eff1f3",
+                        "surface-dim": "#d8dadc",
+                        "outline-variant": "#c3c5d9",
+                        "surface-container-lowest": "#ffffff",
+                        "on-secondary-fixed": "#0b1c30",
+                        "background": "#f7f9fb",
+                        "tertiary-container": "#bf3003",
+                        "on-tertiary-fixed-variant": "#891e00",
+                        "primary-fixed-dim": "#b7c4ff",
+                        "on-error": "#ffffff",
+                        "inverse-surface": "#2d3133",
+                        "on-secondary-container": "#54647a",
+                        "on-primary-fixed-variant": "#0038b6",
+                        "surface-variant": "#e0e3e5",
+                        "secondary-fixed": "#d3e4fe",
+                        "secondary": "#505f76",
+                        "on-primary": "#ffffff",
+                        "on-tertiary-fixed": "#3c0800",
+                        "primary": "#003ec7",
+                        "on-tertiary": "#ffffff",
+                        "surface": "#f7f9fb"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "sm": "8px",
+                        "xs": "4px",
+                        "gutter": "24px",
+                        "lg": "24px",
+                        "md": "16px",
+                        "xl": "40px",
+                        "base": "4px",
+                        "container-max": "1200px"
+                    },
+                    "fontFamily": {
+                        "headline-sm": [
+                            "Inter"
+                        ],
+                        "headline-md": [
+                            "Inter"
+                        ],
+                        "label-md": [
+                            "Inter"
+                        ],
+                        "body-md": [
+                            "Inter"
+                        ],
+                        "headline-md-mobile": [
+                            "Inter"
+                        ],
+                        "display-lg": [
+                            "Inter"
+                        ],
+                        "body-lg": [
+                            "Inter"
+                        ]
+                    },
+                    "fontSize": {
+                        "headline-sm": [
+                            "20px",
+                            {
+                                "lineHeight": "28px",
+                                "fontWeight": "600"
+                            }
+                        ],
+                        "headline-md": [
+                            "24px",
+                            {
+                                "lineHeight": "32px",
+                                "letterSpacing": "-0.01em",
+                                "fontWeight": "600"
+                            }
+                        ],
+                        "label-md": [
+                            "12px",
+                            {
+                                "lineHeight": "16px",
+                                "letterSpacing": "0.05em",
+                                "fontWeight": "600"
+                            }
+                        ],
+                        "body-md": [
+                            "14px",
+                            {
+                                "lineHeight": "20px",
+                                "fontWeight": "400"
+                            }
+                        ],
+                        "headline-md-mobile": [
+                            "20px",
+                            {
+                                "lineHeight": "28px",
+                                "fontWeight": "600"
+                            }
+                        ],
+                        "display-lg": [
+                            "32px",
+                            {
+                                "lineHeight": "40px",
+                                "letterSpacing": "-0.02em",
+                                "fontWeight": "700"
+                            }
+                        ],
+                        "body-lg": [
+                            "16px",
+                            {
+                                "lineHeight": "24px",
+                                "fontWeight": "400"
+                            }
+                        ]
+                    }
                 },
-              },
-            }
-        </script>
+            },
+        }
+    </script>
     <style>
-            .contact-row-actions {
-                opacity: 0;
-                transition: opacity 0.2s ease-in-out;
-            }
-            .contact-row:hover .contact-row-actions {
-                opacity: 1;
-            }
-        </style>
-    </head>
-    <body class="bg-background text-on-background font-body-md min-h-screen flex">
+        .contact-row-actions {
+            opacity: 0;
+            transition: opacity 0.2s ease-in-out;
+        }
+
+        .contact-row:hover .contact-row-actions {
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body class="bg-background text-on-background font-body-md min-h-screen flex">
     <!-- SideNavBar -->
-    <nav class="hidden lg:flex flex-col h-screen w-64 fixed left-0 top-0 py-lg px-md gap-lg bg-surface-bright border-r border-surface-container-low transition-all duration-200 ease-in-out z-40">
-    <!-- Header -->
-    <div class="flex items-center gap-md px-md">
-    <img alt="Organization Logo" class="w-10 h-10 rounded-lg object-cover" data-alt="A small, stylized geometric logo representing a professional network. Crisp lines, minimalist design, mostly blue and grey tones on a white background. Professional, modern, and clean corporate identity mark." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCCM_Pfa2iYhfP2YcrrMmCieZKxl_-m6JWRjgUhQFUwA84QQc_HTiqiWY_ntssrdzIcb3G7H0Q_qWZJNWH5sWo6YfJ3pryoIV7cDGpwnNDRPV27YWWfVrMuvmrIXW3bq9OXcj-j45JeZJyF88Ag8yPsFDayD3rE_TgjglGNscRTYEcVtbnKF_u7p7cCdUHzEgOhV7Jqs0p1BwsjSu4ze4mzkviHfG6orlxOz1tV49KHEnaPMCCO6tpaJw0Zanjx0EsRy9fyd2TcYL8l">
-    <div>
-    <h1 class="font-headline-sm text-headline-sm font-black text-on-surface">ProNetwork</h1>
-    <p class="font-label-md text-label-md text-on-surface-variant">Enterprise Edition</p>
-    </div>
-    </div>
-    <!-- Main Nav -->
-    <div class="flex-1 flex flex-col gap-sm mt-xl">
-    <!-- Active: Contacts -->
-    <a class="flex items-center gap-md bg-secondary-container text-on-secondary-container rounded-full px-md py-sm transition-all duration-200 ease-in-out hover:bg-surface-container-highest cursor-pointer active:opacity-80" href="dashboard.html">
-    <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">group</span>
-    <span class="font-label-md text-label-md">Contacts</span>
-    </a>
-    <!-- Inactive -->
-    <a class="flex items-center gap-md text-on-surface-variant px-md py-sm transition-all duration-200 ease-in-out hover:bg-surface-container-highest rounded-full cursor-pointer active:opacity-80" href="favorites.html">
-    <span class="material-symbols-outlined">star</span>
-    <span class="font-label-md text-label-md">Favorites</span>
-    </a>
-    </div>
-    <!-- Footer Nav -->
-    <div class="flex flex-col gap-sm pt-md border-t border-surface-container-low">
-    <a class="flex items-center gap-md text-on-surface-variant px-md py-sm transition-all duration-200 ease-in-out hover:bg-surface-container-highest rounded-full cursor-pointer active:opacity-80" href="trash.html">
-    <span class="material-symbols-outlined">delete</span>
-    <span class="font-label-md text-label-md">Trash</span>
-    </a>
-    </div>
+    <nav
+        class="hidden lg:flex flex-col h-screen w-64 fixed left-0 top-0 py-lg px-md gap-lg bg-surface-bright border-r border-surface-container-low transition-all duration-200 ease-in-out z-40">
+        <!-- Header -->
+        <div class="flex items-center gap-md px-md">
+            <img alt="Organization Logo" class="w-10 h-10 rounded-lg object-cover"
+                data-alt="A small, stylized geometric logo representing a professional network. Crisp lines, minimalist design, mostly blue and grey tones on a white background. Professional, modern, and clean corporate identity mark."
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCCM_Pfa2iYhfP2YcrrMmCieZKxl_-m6JWRjgUhQFUwA84QQc_HTiqiWY_ntssrdzIcb3G7H0Q_qWZJNWH5sWo6YfJ3pryoIV7cDGpwnNDRPV27YWWfVrMuvmrIXW3bq9OXcj-j45JeZJyF88Ag8yPsFDayD3rE_TgjglGNscRTYEcVtbnKF_u7p7cCdUHzEgOhV7Jqs0p1BwsjSu4ze4mzkviHfG6orlxOz1tV49KHEnaPMCCO6tpaJw0Zanjx0EsRy9fyd2TcYL8l">
+            <div>
+                <h1 class="font-headline-sm text-headline-sm font-black text-on-surface">ProNetwork</h1>
+                <p class="font-label-md text-label-md text-on-surface-variant">Enterprise Edition</p>
+            </div>
+        </div>
+        <!-- Main Nav -->
+        <div class="flex-1 flex flex-col gap-sm mt-xl">
+            <!-- Active: Contacts -->
+            <a class="flex items-center gap-md bg-secondary-container text-on-secondary-container rounded-full px-md py-sm transition-all duration-200 ease-in-out hover:bg-surface-container-highest cursor-pointer active:opacity-80"
+                href="dashboard.html">
+                <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">group</span>
+                <span class="font-label-md text-label-md">Contacts</span>
+            </a>
+            <!-- Inactive -->
+            <a class="flex items-center gap-md text-on-surface-variant px-md py-sm transition-all duration-200 ease-in-out hover:bg-surface-container-highest rounded-full cursor-pointer active:opacity-80"
+                href="favorites.html">
+                <span class="material-symbols-outlined">star</span>
+                <span class="font-label-md text-label-md">Favorites</span>
+            </a>
+        </div>
+        <!-- Footer Nav -->
+        <div class="flex flex-col gap-sm pt-md border-t border-surface-container-low">
+            <a class="flex items-center gap-md text-on-surface-variant px-md py-sm transition-all duration-200 ease-in-out hover:bg-surface-container-highest rounded-full cursor-pointer active:opacity-80"
+                href="trash.html">
+                <span class="material-symbols-outlined">delete</span>
+                <span class="font-label-md text-label-md">Trash</span>
+            </a>
+        </div>
     </nav>
     <!-- Main Content Wrapper -->
     <div class="flex-1 flex flex-col min-w-0 lg:ml-64">
-    <!-- TopNavBar -->
-    <header class="flex justify-between items-center w-full px-gutter py-md sticky top-0 z-50 bg-surface-container-lowest shadow-sm">
-    <!-- Mobile Brand (hidden on lg) -->
-    <div class="lg:hidden flex items-center gap-md">
-    <span class="font-headline-md-mobile text-headline-md-mobile font-bold text-primary">ContactHub</span>
+        <!-- TopNavBar -->
+        <header
+            class="flex justify-between items-center w-full px-gutter py-md sticky top-0 z-50 bg-surface-container-lowest shadow-sm">
+            <!-- Mobile Brand (hidden on lg) -->
+            <div class="lg:hidden flex items-center gap-md">
+                <span class="font-headline-md-mobile text-headline-md-mobile font-bold text-primary">ContactHub</span>
+            </div>
+            <!-- Search (Left aligned as per JSON) -->
+            <div class="flex-1 max-w-xl hidden md:flex items-center">
+                <div class="relative w-full">
+                    <span
+                        class="material-symbols-outlined absolute left-sm top-1/2 -translate-y-1/2 text-outline">search</span>
+                    <input
+                        class="w-full pl-xl pr-md py-sm bg-surface-bright border border-outline-variant rounded-full font-body-md text-on-surface focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/10 transition-all"
+                        placeholder="Search contacts..." type="text">
+                </div>
+            </div>
+            <!-- Mobile Search Icon -->
+            <button class="md:hidden p-sm text-on-surface-variant">
+                <span class="material-symbols-outlined">search</span>
+            </button>
+            <!-- Actions -->
+            <div class="flex items-center gap-md">
+                <button
+                    class="hidden md:flex p-sm text-on-surface-variant hover:bg-surface-container-low rounded-full transition-colors">
+                    <span class="material-symbols-outlined">settings</span>
+                </button>
+                <button
+                    class="hidden md:flex p-sm text-on-surface-variant hover:bg-surface-container-low rounded-full transition-colors">
+                    <span class="material-symbols-outlined">help</span>
+                </button>
+                <a href="addcontact.html"
+                    class="flex items-center gap-sm bg-primary text-on-primary px-md py-sm rounded-full font-label-md text-label-md hover:bg-on-primary-fixed-variant transition-colors shadow-sm">
+                    <span class="material-symbols-outlined text-[18px]">add</span>
+                    <span class="hidden sm:inline">Add Contact</span>
+                </a>
+                <img alt="User profile photo"
+                    class="w-10 h-10 rounded-full object-cover ml-sm border border-outline-variant"
+                    data-alt="A professional headshot of a person, well-lit, corporate environment background, wearing business casual attire. Used as a tiny profile avatar in a navigation bar."
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuB5RC-XPrVgk2ekB7q3jdqsxG2Zv06tL5p_O6cPzMD0evP-F-QzPhDOa7fqs9DAuzNRW7CmDTUJ3nA2SjkNGXUFFahPN_iWkAbPOqkw9NfbZuc23nRJ4yPK4HfxNklRL0Da1DCCNZ_uudnfNtAY4VpRvGJO93iNDqbULLE5T3-Fq8dF1NNKN70x2vDJwnrj8_oZjPBzAzd0AFzPeOfDc7gG3dAcHBuGeeVaTPFXxKwF-xaTwktMl0E14fC5_6VLcpM6gVvFuNxlw3oV">
+            </div>
+        </header>
+        <!-- Page Content -->
+        <main class="flex-1 p-gutter max-w-container-max mx-auto w-full">
+            <div class="mb-xl flex justify-between items-end">
+                <div>
+                    <h2 class="font-display-lg text-display-lg text-on-surface mb-xs">My Contacts (<span
+                            id="contactCount"></span>)</h2>
+                    <p class="font-body-lg text-body-lg text-on-surface-variant">Manage and organize your professional
+                        network.</p>
+                </div>
+                <div class="hidden sm:flex gap-sm">
+                    <button onclick="reverseContacts(getContacts())"
+                        class="px-md py-xs bg-surface-container-lowest border border-outline text-on-surface-variant rounded-full font-label-md text-label-md flex items-center gap-xs hover:bg-surface-container-low transition-colors">
+                        <span class="material-symbols-outlined text-[16px]">filter_list</span> Filter
+                    </button>
+                    <button
+                        class="px-md py-xs bg-surface-container-lowest border border-outline text-on-surface-variant rounded-full font-label-md text-label-md flex items-center gap-xs hover:bg-surface-container-low transition-colors">
+                        <span class="material-symbols-outlined text-[16px]">sort</span> Sort
+                    </button>
+                </div>
+            </div>
+            <!-- Contact List Grid layout -->
+            <div id="contactList" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-lg">
+            </div>
+            <!-- Empty state -->
+            <div id="emptyState" class="hidden flex-col items-center justify-center text-center py-xl gap-md">
+                <span class="material-symbols-outlined text-6xl text-outline-variant">group_off</span>
+                <p class="font-body-lg text-body-lg text-on-surface-variant">No contacts yet.</p>
+                <a href="addcontact.html"
+                    class="flex items-center gap-sm bg-primary text-on-primary px-md py-sm rounded-full font-label-md text-label-md hover:bg-on-primary-fixed-variant transition-colors shadow-sm">
+                    <span class="material-symbols-outlined text-[18px]">add</span> Add your first contact
+                </a>
+            </div>
+        </main>
     </div>
-    <!-- Search (Left aligned as per JSON) -->
-    <div class="flex-1 max-w-xl hidden md:flex items-center">
-    <div class="relative w-full">
-    <span class="material-symbols-outlined absolute left-sm top-1/2 -translate-y-1/2 text-outline">search</span>
-    <input class="w-full pl-xl pr-md py-sm bg-surface-bright border border-outline-variant rounded-full font-body-md text-on-surface focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/10 transition-all" placeholder="Search contacts..." type="text">
-    </div>
-    </div>
-    <!-- Mobile Search Icon -->
-    <button class="md:hidden p-sm text-on-surface-variant">
-    <span class="material-symbols-outlined">search</span>
-    </button>
-    <!-- Actions -->
-    <div class="flex items-center gap-md">
-    <button class="hidden md:flex p-sm text-on-surface-variant hover:bg-surface-container-low rounded-full transition-colors">
-    <span class="material-symbols-outlined">settings</span>
-    </button>
-    <button class="hidden md:flex p-sm text-on-surface-variant hover:bg-surface-container-low rounded-full transition-colors">
-    <span class="material-symbols-outlined">help</span>
-    </button>
-    <a href="addcontact.html" class="flex items-center gap-sm bg-primary text-on-primary px-md py-sm rounded-full font-label-md text-label-md hover:bg-on-primary-fixed-variant transition-colors shadow-sm">
-    <span class="material-symbols-outlined text-[18px]">add</span>
-    <span class="hidden sm:inline">Add Contact</span>
-    </a>
-    <img alt="User profile photo" class="w-10 h-10 rounded-full object-cover ml-sm border border-outline-variant" data-alt="A professional headshot of a person, well-lit, corporate environment background, wearing business casual attire. Used as a tiny profile avatar in a navigation bar." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB5RC-XPrVgk2ekB7q3jdqsxG2Zv06tL5p_O6cPzMD0evP-F-QzPhDOa7fqs9DAuzNRW7CmDTUJ3nA2SjkNGXUFFahPN_iWkAbPOqkw9NfbZuc23nRJ4yPK4HfxNklRL0Da1DCCNZ_uudnfNtAY4VpRvGJO93iNDqbULLE5T3-Fq8dF1NNKN70x2vDJwnrj8_oZjPBzAzd0AFzPeOfDc7gG3dAcHBuGeeVaTPFXxKwF-xaTwktMl0E14fC5_6VLcpM6gVvFuNxlw3oV">
-    </div>
-    </header>
-    <!-- Page Content -->
-    <main class="flex-1 p-gutter max-w-container-max mx-auto w-full">
-    <div class="mb-xl flex justify-between items-end">
-    <div>
-    <h2 class="font-display-lg text-display-lg text-on-surface mb-xs">My Contacts</h2>
-    <p class="font-body-lg text-body-lg text-on-surface-variant">Manage and organize your professional network.</p>
-    </div>
-    <div class="hidden sm:flex gap-sm">
-    <button class="px-md py-xs bg-surface-container-lowest border border-outline text-on-surface-variant rounded-full font-label-md text-label-md flex items-center gap-xs hover:bg-surface-container-low transition-colors">
-    <span class="material-symbols-outlined text-[16px]">filter_list</span> Filter
-                         </button>
-    <button class="px-md py-xs bg-surface-container-lowest border border-outline text-on-surface-variant rounded-full font-label-md text-label-md flex items-center gap-xs hover:bg-surface-container-low transition-colors">
-    <span class="material-symbols-outlined text-[16px]">sort</span> Sort
-                         </button>
-    </div>
-    </div>
-    <!-- Contact List Grid layout -->
-    <div id="contactList" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-lg">
-    </div>
-    <!-- Empty state -->
-    <div id="emptyState" class="hidden flex-col items-center justify-center text-center py-xl gap-md">
-    <span class="material-symbols-outlined text-6xl text-outline-variant">group_off</span>
-    <p class="font-body-lg text-body-lg text-on-surface-variant">No contacts yet.</p>
-    <a href="addcontact.html" class="flex items-center gap-sm bg-primary text-on-primary px-md py-sm rounded-full font-label-md text-label-md hover:bg-on-primary-fixed-variant transition-colors shadow-sm">
-    <span class="material-symbols-outlined text-[18px]">add</span> Add your first contact
-    </a>
-    </div>
-    </main>
-    </div>
-    
-    
-    
-    
-    </body>
-    <script>
-        function getContacts() {
-            let stored = localStorage.getItem("contacts");
-            return stored ? JSON.parse(stored) : [];
+
+
+
+
+</body>
+<script>
+    function getContacts() {
+        let stored = localStorage.getItem("contacts");
+        return stored ? JSON.parse(stored) : [];
+    }
+
+    function escapeHtml(str) {
+        return String(str || "").replace(/[&<>"']/g, function (c) {
+            return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c];
+        });
+    }
+
+    function avatar(contact) {
+        if (contact.photo) {
+            return `<img src="${escapeHtml(contact.photo)}" alt="${escapeHtml(contact.name)}" class="w-16 h-16 rounded-full object-cover">`;
+        }
+        let initials = (contact.name || "?").trim().split(/\s+/).map(p => p[0]).slice(0, 2).join("").toUpperCase();
+        return `<div class="w-16 h-16 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center font-headline-sm text-headline-sm">${escapeHtml(initials)}</div>`;
+    }
+    function reverseContacts() {
+        let contacts = getContacts();
+        let newContacts = contacts.reverse();
+        localStorage.setItem("contacts", JSON.stringify(newContacts));
+        displayContacts();
+    }
+
+    function displayContacts() {
+        let contacts = getContacts();
+        let contactList = document.getElementById("contactList");
+        let emptyState = document.getElementById("emptyState");
+
+        if (!contacts.length) {
+            contactList.classList.add("hidden");
+            emptyState.classList.remove("hidden");
+            emptyState.classList.add("flex");
+            return;
         }
 
-        function escapeHtml(str) {
-            return String(str || "").replace(/[&<>"']/g, function (c) {
-                return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c];
-            });
-        }
+        contactList.classList.remove("hidden");
+        emptyState.classList.add("hidden");
+        emptyState.classList.remove("flex");
+        contactList.innerHTML = "";
 
-        function avatar(contact) {
-            if (contact.photo) {
-                return `<img src="${escapeHtml(contact.photo)}" alt="${escapeHtml(contact.name)}" class="w-16 h-16 rounded-full object-cover">`;
-            }
-            let initials = (contact.name || "?").trim().split(/\s+/).map(p => p[0]).slice(0, 2).join("").toUpperCase();
-            return `<div class="w-16 h-16 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center font-headline-sm text-headline-sm">${escapeHtml(initials)}</div>`;
-        }
-
-        function displayContacts() {
-            let contacts = getContacts();
-            let contactList = document.getElementById("contactList");
-            let emptyState = document.getElementById("emptyState");
-
-            if (!contacts.length) {
-                contactList.classList.add("hidden");
-                emptyState.classList.remove("hidden");
-                emptyState.classList.add("flex");
-                return;
-            }
-
-            contactList.classList.remove("hidden");
-            emptyState.classList.add("hidden");
-            emptyState.classList.remove("flex");
-            contactList.innerHTML = "";
-
-            contacts.forEach((contact, index) => {
-                let card = document.createElement("div");
-                card.className = "contact-row bg-surface-container-lowest rounded-xl border border-surface-container-high shadow-sm p-lg flex flex-col gap-md relative transition-shadow hover:shadow-md cursor-default";
-                card.innerHTML = `
+        contacts.forEach((contact, index) => {
+            let card = document.createElement("div");
+            card.className = "contact-row bg-surface-container-lowest rounded-xl border border-surface-container-high shadow-sm p-lg flex flex-col gap-md relative transition-shadow hover:shadow-md cursor-default";
+            card.innerHTML = `
                     <div class="flex justify-between items-start">
                         ${avatar(contact)}
                         <div class="contact-row-actions flex gap-sm">
@@ -337,33 +373,35 @@
                         </div>` : ""}
                     </div>
                 `;
-                contactList.appendChild(card);
-            });
-        }
+            contactList.appendChild(card);
+            document.getElementById("contactCount").textContent = (contacts.length);
+        });
+    }
 
-        function toggleFavorite(index) {
-            let contacts = getContacts();
-            contacts[index].favorite = !contacts[index].favorite;
-            localStorage.setItem("contacts", JSON.stringify(contacts));
-            displayContacts();
-        }
-
-        function editContact(index) {
-            window.location.href = "edit.html?index=" + index;
-        }
-
-        function deleteContact(index) {
-            if (!confirm("Move this contact to trash?")) return;
-            let contacts = getContacts();
-            let removed = contacts.splice(index, 1)[0];
-            removed.deletedAt = Date.now();
-            let trash = JSON.parse(localStorage.getItem("trash") || "[]");
-            trash.push(removed);
-            localStorage.setItem("trash", JSON.stringify(trash));
-            localStorage.setItem("contacts", JSON.stringify(contacts));
-            displayContacts();
-        }
-
+    function toggleFavorite(index) {
+        let contacts = getContacts();
+        contacts[index].favorite = !contacts[index].favorite;
+        localStorage.setItem("contacts", JSON.stringify(contacts));
         displayContacts();
-    </script>
-    </html>
+    }
+
+    function editContact(index) {
+        window.location.href = "edit.html?index=" + index;
+    }
+
+    function deleteContact(index) {
+        if (!confirm("Move this contact to trash?")) return;
+        let contacts = getContacts();
+        let removed = contacts.splice(index, 1)[0];
+        removed.deletedAt = Date.now();
+        let trash = JSON.parse(localStorage.getItem("trash") || "[]");
+        trash.push(removed);
+        localStorage.setItem("trash", JSON.stringify(trash));
+        localStorage.setItem("contacts", JSON.stringify(contacts));
+        displayContacts();
+    }
+
+    displayContacts();
+</script>
+
+</html>
