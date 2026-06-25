@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>ProNetwork - Edit Contact</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "tertiary-fixed": "#ffdbd2",
+                      "primary-container": "#0052ff",
+                      "on-secondary-container": "#54647a",
+                      "surface-tint": "#004ced",
+                      "surface-container": "#eceef0",
+                      "on-background": "#191c1e",
+                      "on-tertiary-fixed-variant": "#891e00",
+                      "error-container": "#ffdad6",
+                      "on-tertiary-container": "#ffddd5",
+                      "on-error": "#ffffff",
+                      "on-tertiary-fixed": "#3c0800",
+                      "secondary-fixed": "#d3e4fe",
+                      "surface-container-low": "#f2f4f6",
+                      "outline-variant": "#c3c5d9",
+                      "on-secondary": "#ffffff",
+                      "on-surface-variant": "#434656",
+                      "surface-container-highest": "#e0e3e5",
+                      "secondary": "#505f76",
+                      "on-primary-fixed-variant": "#0038b6",
+                      "background": "#f7f9fb",
+                      "tertiary": "#952200",
+                      "surface-container-lowest": "#ffffff",
+                      "on-tertiary": "#ffffff",
+                      "on-secondary-fixed": "#0b1c30",
+                      "inverse-on-surface": "#eff1f3",
+                      "surface": "#f7f9fb",
+                      "on-primary-fixed": "#001452",
+                      "surface-container-high": "#e6e8ea",
+                      "surface-bright": "#f7f9fb",
+                      "secondary-container": "#d0e1fb",
+                      "on-secondary-fixed-variant": "#38485d",
+                      "on-surface": "#191c1e",
+                      "on-primary-container": "#dfe3ff",
+                      "tertiary-container": "#bf3003",
+                      "primary": "#003ec7",
+                      "on-primary": "#ffffff",
+                      "error": "#ba1a1a",
+                      "primary-fixed": "#dde1ff",
+                      "outline": "#737688",
+                      "primary-fixed-dim": "#b7c4ff",
+                      "inverse-primary": "#b7c4ff",
+                      "surface-dim": "#d8dadc",
+                      "inverse-surface": "#2d3133",
+                      "secondary-fixed-dim": "#b7c8e1",
+                      "tertiary-fixed-dim": "#ffb4a1",
+                      "surface-variant": "#e0e3e5",
+                      "on-error-container": "#93000a"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.125rem",
+                      "lg": "0.25rem",
+                      "xl": "0.5rem",
+                      "full": "0.75rem"
+              },
+              "spacing": {
+                      "xl": "40px",
+                      "container-max": "1200px",
+                      "md": "16px",
+                      "gutter": "24px",
+                      "sm": "8px",
+                      "base": "4px",
+                      "xs": "4px",
+                      "lg": "24px"
+              },
+              "fontFamily": {
+                      "display-lg": [
+                              "Inter"
+                      ],
+                      "body-md": [
+                              "Inter"
+                      ],
+                      "headline-md-mobile": [
+                              "Inter"
+                      ],
+                      "headline-sm": [
+                              "Inter"
+                      ],
+                      "body-lg": [
+                              "Inter"
+                      ],
+                      "headline-md": [
+                              "Inter"
+                      ],
+                      "label-md": [
+                              "Inter"
+                      ]
+              },
+              "fontSize": {
+                      "display-lg": [
+                              "32px",
+                              {
+                                      "lineHeight": "40px",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "body-md": [
+                              "14px",
+                              {
+                                      "lineHeight": "20px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "headline-md-mobile": [
+                              "20px",
+                              {
+                                      "lineHeight": "28px",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "headline-sm": [
+                              "20px",
+                              {
+                                      "lineHeight": "28px",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "body-lg": [
+                              "16px",
+                              {
+                                      "lineHeight": "24px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "headline-md": [
+                              "24px",
+                              {
+                                      "lineHeight": "32px",
+                                      "letterSpacing": "-0.01em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "label-md": [
+                              "12px",
+                              {
+                                      "lineHeight": "16px",
+                                      "letterSpacing": "0.05em",
+                                      "fontWeight": "600"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+      </script>
+</head>
+<body class="bg-background text-on-background font-body-md min-h-screen flex text-body-md font-body-md">
+<!-- SideNavBar -->
+<nav class="bg-surface-container-low dark:bg-surface-container border-r border-outline-variant dark:border-outline h-screen w-64 fixed left-0 top-0 flex flex-col p-md gap-base z-20 hidden md:flex">
+<div class="mb-xl">
+<h1 class="text-headline-md font-headline-md text-primary dark:text-primary-fixed-dim">ProNetwork</h1>
+<p class="text-label-md font-label-md text-on-surface-variant mt-sm">Professional CRM</p>
+</div>
+<div class="flex-1 flex flex-col gap-sm">
+<a class="flex items-center gap-md text-on-surface-variant dark:text-on-secondary-container px-md py-sm hover:bg-surface-container-high dark:hover:bg-surface-container-highest rounded-xl transition-all" href="dashboard.html">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="text-label-md font-label-md">Contacts</span>
+</a>
+<a class="flex items-center gap-md text-on-surface-variant dark:text-on-secondary-container px-md py-sm hover:bg-surface-container-high dark:hover:bg-surface-container-highest rounded-xl transition-all" href="favorites.html">
+<span class="material-symbols-outlined" data-icon="star">star</span>
+<span class="text-label-md font-label-md">Favorites</span>
+</a>
+<a class="flex items-center gap-md text-on-surface-variant dark:text-on-secondary-container px-md py-sm hover:bg-surface-container-high dark:hover:bg-surface-container-highest rounded-xl transition-all" href="trash.html">
+<span class="material-symbols-outlined" data-icon="delete">delete</span>
+<span class="text-label-md font-label-md">Trash</span>
+</a>
+</div>
+</nav>
+<!-- Main Content Area -->
+<div class="flex-1 flex flex-col md:ml-64 relative min-h-screen">
+<!-- TopNavBar -->
+<header class="bg-surface dark:bg-surface-dim border-b border-outline-variant dark:border-outline shadow-sm w-full h-16 sticky top-0 z-10 hidden md:block">
+<div class="flex justify-between items-center px-lg w-full max-w-container-max mx-auto h-full">
+<!-- Mobile brand, hidden on desktop sidebar layout, but available if responsive logic changes -->
+<div class="md:hidden text-headline-md font-headline-md font-bold text-primary dark:text-primary-fixed-dim">ProNetwork</div>
+<div class="flex-1 flex justify-end items-center gap-lg ml-auto">
+<!-- Actions -->
+<div class="flex items-center gap-md">
+<button aria-label="Notifications" class="p-sm text-on-surface-variant dark:text-surface-variant hover:bg-surface-container-low dark:hover:bg-surface-container-highest transition-colors rounded-full">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+<button aria-label="Help" class="p-sm text-on-surface-variant dark:text-surface-variant hover:bg-surface-container-low dark:hover:bg-surface-container-highest transition-colors rounded-full">
+<span class="material-symbols-outlined" data-icon="help">help</span>
+</button>
+</div>
+<!-- Trailing Primary Action -->
+<a href="addcontact.html" class="bg-primary text-on-primary px-md py-sm rounded-lg text-label-md font-label-md hover:bg-surface-tint transition-colors">
+                        Add Contact
+                    </a>
+<!-- User Profile Placeholder -->
+<div class="w-8 h-8 rounded-full bg-surface-container-highest border border-outline-variant flex items-center justify-center overflow-hidden">
+<img alt="User profile" class="w-full h-full object-cover" data-alt="A small, circular avatar image of a professional woman with brown hair, smiling gently in a well-lit studio setting with a clean, light gray background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCFU3w55y3W2iR7RhTbRBaB8X8zcBOz2F3IZpCoOPjQKrAMX-b9oOoo0Xv3wz4uBmWBpuxnOa7NAkmhLlIq-D-sjvQhAm76SiWb8fm_s3ryv6-iJb5YXkctLHBm-19kt8Q0b6z87A3zOKCZqK7OfU9YakiAPa0-zyd_AblSLjBPKW4FfxwTduxVWrf_WavSDXauOQSLUL2O_WeC0zdPNJpzEL2V__lewEU9Gw4dAmeJ6lHuUVJzbPOnj5fYlsTKxZmd52b0I8_vwHKl"/>
+</div>
+</div>
+</div>
+</header>
+<!-- Canvas / Form Area -->
+<main class="flex-1 p-md md:p-xl flex justify-center items-start pt-xl md:pt-[64px]">
+<div class="w-full max-w-2xl bg-surface-container-lowest border border-outline-variant rounded-xl shadow-sm overflow-hidden mt-md md:mt-xl">
+<!-- Form Header -->
+<div class="px-xl py-lg border-b border-surface-variant bg-surface-bright flex justify-between items-center">
+<h2 class="text-headline-sm font-headline-sm text-on-surface">Edit Contact</h2>
+<a href="dashboard.html" class="text-on-surface-variant hover:text-primary transition-colors p-xs rounded-full hover:bg-surface-container-low">
+<span class="material-symbols-outlined" data-icon="close">close</span>
+</a>
+</div>
+<!-- Form Content -->
+<form class="p-xl space-y-gutter">
+<!-- Profile Image Section -->
+<div class="flex flex-col items-center sm:items-start sm:flex-row gap-lg pb-md border-b border-surface-variant">
+<label for="photoInput" class="relative group cursor-pointer">
+<div class="w-32 h-32 rounded-full overflow-hidden border border-outline-variant relative bg-surface-container-highest flex items-center justify-center">
+<img id="photoPreview" alt="Profile" class="w-full h-full object-cover hidden"/>
+<span id="photoPlaceholder" class="material-symbols-outlined text-4xl text-on-surface-variant" data-icon="person">person</span>
+<!-- Hover Overlay for edit -->
+<div class="absolute inset-0 bg-on-background/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-on-primary" data-icon="photo_camera">photo_camera</span>
+</div>
+</div>
+</label>
+<input id="photoInput" type="file" accept="image/*" class="hidden"/>
+<div class="flex flex-col justify-center gap-sm mt-md sm:mt-0">
+<div class="text-body-md font-body-md text-on-surface-variant">Upload a new professional headshot. Recommended size: 400x400px.</div>
+<div class="flex gap-md">
+<button onclick="document.getElementById('photoInput').click()" class="text-label-md font-label-md text-primary border border-outline-variant px-md py-sm rounded-lg hover:bg-surface-container-low transition-colors bg-surface-container-lowest shadow-sm" type="button">Change Image</button>
+<button onclick="removePhoto()" class="text-label-md font-label-md text-error hover:bg-error-container/20 px-md py-sm rounded-lg transition-colors" type="button">Remove</button>
+</div>
+</div>
+</div>
+<!-- Personal Details -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-md">
+<div class="space-y-sm">
+<label class="text-label-md font-label-md text-on-surface-variant block" for="firstName">First Name</label>
+<input class="w-full bg-surface-container-lowest border border-outline-variant rounded-lg px-md py-sm text-body-md font-body-md text-on-surface focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/10 transition-all" id="firstName" type="text" placeholder="Jane"/>
+</div>
+<div class="space-y-sm">
+<label class="text-label-md font-label-md text-on-surface-variant block" for="lastName">Last Name</label>
+<input class="w-full bg-surface-container-lowest border border-outline-variant rounded-lg px-md py-sm text-body-md font-body-md text-on-surface focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/10 transition-all" id="lastName" type="text" placeholder="Doe"/>
+</div>
+</div>
+<!-- Contact Details -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-md">
+<div class="space-y-sm">
+<label class="text-label-md font-label-md text-on-surface-variant block" for="email">Email Address</label>
+<input class="w-full bg-surface-container-lowest border border-outline-variant rounded-lg px-md py-sm text-body-md font-body-md text-on-surface focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/10 transition-all" id="email" type="email" placeholder="jane.doe@example.com"/>
+</div>
+<div class="space-y-sm">
+<label class="text-label-md font-label-md text-on-surface-variant block" for="phone">Phone Number</label>
+<input class="w-full bg-surface-container-lowest border border-outline-variant rounded-lg px-md py-sm text-body-md font-body-md text-on-surface focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/10 transition-all" id="phone" type="tel" placeholder="+1 (555) 000-0000"/>
+</div>
+</div>
+<!-- Professional Details -->
+<div class="space-y-sm pb-lg">
+<label class="text-label-md font-label-md text-on-surface-variant block" for="company">Company / Label</label>
+<div class="relative">
+<input class="w-full bg-surface-container-lowest border border-outline-variant rounded-lg px-md py-sm text-body-md font-body-md text-on-surface focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/10 transition-all pl-10" id="company" type="text" placeholder="Acme Corp"/>
+<span class="material-symbols-outlined absolute left-sm top-1/2 -translate-y-1/2 text-on-surface-variant" data-icon="business">business</span>
+</div>
+<div class="flex gap-sm mt-sm flex-wrap">
+<span class="bg-[#F1F5F9] text-secondary text-label-md font-label-md px-sm py-xs rounded-full border border-outline-variant">Key Client</span>
+<span class="bg-[#F1F5F9] text-secondary text-label-md font-label-md px-sm py-xs rounded-full border border-outline-variant">Q4 Pipeline</span>
+</div>
+</div>
+<!-- Form Actions -->
+<div class="pt-lg border-t border-surface-variant flex justify-end gap-md">
+<button onclick="window.location.href='dashboard.html'" class="px-lg py-sm text-label-md font-label-md text-on-surface bg-surface-container-lowest border border-outline-variant rounded-lg hover:bg-surface-container-low transition-colors shadow-sm" type="button">
+                            Cancel
+                        </button>
+<button onclick="updateContact()" class="px-lg py-sm text-label-md font-label-md text-on-primary bg-primary rounded-lg hover:bg-surface-tint transition-colors shadow-sm" type="button">
+                            Update Contact
+                        </button>
+</div>
+</form>
+</div>
+</main>
+</div>
+<script>
+    function getContacts() {
+        return JSON.parse(localStorage.getItem("contacts") || "[]");
+    }
+
+    function getIndex() {
+        let params = new URLSearchParams(window.location.search);
+        let i = parseInt(params.get("index"), 10);
+        return Number.isInteger(i) ? i : -1;
+    }
+
+    let editIndex = getIndex();
+    let photoDataUrl = "";
+
+    function setPhotoPreview(src) {
+        let preview = document.getElementById("photoPreview");
+        let placeholder = document.getElementById("photoPlaceholder");
+        if (src) {
+            preview.src = src;
+            preview.classList.remove("hidden");
+            placeholder.classList.add("hidden");
+        } else {
+            preview.src = "";
+            preview.classList.add("hidden");
+            placeholder.classList.remove("hidden");
+        }
+    }
+
+    function removePhoto() {
+        photoDataUrl = "";
+        setPhotoPreview("");
+    }
+
+    document.getElementById("photoInput").addEventListener("change", function (e) {
+        let file = e.target.files[0];
+        if (!file) return;
+        if (!file.type.startsWith("image/")) { alert("Please choose an image file."); return; }
+        if (file.size > 2 * 1024 * 1024) { alert("Image is too large. Please choose one under 2MB."); return; }
+        let reader = new FileReader();
+        reader.onload = function (ev) {
+            photoDataUrl = ev.target.result;
+            setPhotoPreview(photoDataUrl);
+        };
+        reader.readAsDataURL(file);
+    });
+
+    function loadContact() {
+        let contacts = getContacts();
+        if (editIndex < 0 || editIndex >= contacts.length) {
+            alert("Contact not found.");
+            window.location.href = "dashboard.html";
+            return;
+        }
+        let c = contacts[editIndex];
+        let parts = (c.name || "").trim().split(/\s+/);
+        document.getElementById("firstName").value = parts.shift() || "";
+        document.getElementById("lastName").value = parts.join(" ");
+        document.getElementById("email").value = c.email || "";
+        document.getElementById("phone").value = c.phone || "";
+        document.getElementById("company").value = c.company || "";
+        photoDataUrl = c.photo || "";
+        setPhotoPreview(photoDataUrl);
+    }
+
+    function updateContact() {
+        let contacts = getContacts();
+        if (editIndex < 0 || editIndex >= contacts.length) {
+            alert("Contact not found.");
+            return;
+        }
+        let firstName = document.getElementById("firstName").value.trim();
+        let lastName = document.getElementById("lastName").value.trim();
+        if (!firstName && !lastName) { alert("Please enter a name."); return; }
+
+        let existing = contacts[editIndex];
+        contacts[editIndex] = {
+            ...existing,
+            name: (firstName + " " + lastName).trim(),
+            company: document.getElementById("company").value.trim(),
+            email: document.getElementById("email").value.trim(),
+            phone: document.getElementById("phone").value.trim(),
+            photo: photoDataUrl
+        };
+        try {
+            localStorage.setItem("contacts", JSON.stringify(contacts));
+        } catch (err) {
+            alert("Could not save: storage is full (images take up space).");
+            return;
+        }
+        alert("Contact updated!");
+        window.location.href = "dashboard.html";
+    }
+
+    loadContact();
+</script>
+</body></html>

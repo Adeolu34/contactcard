@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>ProNetwork - Trash</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "tertiary-fixed": "#ffdbd2",
+                        "primary-container": "#0052ff",
+                        "on-secondary-container": "#54647a",
+                        "surface-tint": "#004ced",
+                        "surface-container": "#eceef0",
+                        "on-background": "#191c1e",
+                        "on-tertiary-fixed-variant": "#891e00",
+                        "error-container": "#ffdad6",
+                        "on-tertiary-container": "#ffddd5",
+                        "on-error": "#ffffff",
+                        "on-tertiary-fixed": "#3c0800",
+                        "secondary-fixed": "#d3e4fe",
+                        "surface-container-low": "#f2f4f6",
+                        "outline-variant": "#c3c5d9",
+                        "on-secondary": "#ffffff",
+                        "on-surface-variant": "#434656",
+                        "surface-container-highest": "#e0e3e5",
+                        "secondary": "#505f76",
+                        "on-primary-fixed-variant": "#0038b6",
+                        "background": "#f7f9fb",
+                        "tertiary": "#952200",
+                        "surface-container-lowest": "#ffffff",
+                        "on-tertiary": "#ffffff",
+                        "on-secondary-fixed": "#0b1c30",
+                        "inverse-on-surface": "#eff1f3",
+                        "surface": "#f7f9fb",
+                        "on-primary-fixed": "#001452",
+                        "surface-container-high": "#e6e8ea",
+                        "surface-bright": "#f7f9fb",
+                        "secondary-container": "#d0e1fb",
+                        "on-secondary-fixed-variant": "#38485d",
+                        "on-surface": "#191c1e",
+                        "on-primary-container": "#dfe3ff",
+                        "tertiary-container": "#bf3003",
+                        "primary": "#003ec7",
+                        "on-primary": "#ffffff",
+                        "error": "#ba1a1a",
+                        "primary-fixed": "#dde1ff",
+                        "outline": "#737688",
+                        "primary-fixed-dim": "#b7c4ff",
+                        "inverse-primary": "#b7c4ff",
+                        "surface-dim": "#d8dadc",
+                        "inverse-surface": "#2d3133",
+                        "secondary-fixed-dim": "#b7c8e1",
+                        "tertiary-fixed-dim": "#ffb4a1",
+                        "surface-variant": "#e0e3e5",
+                        "on-error-container": "#93000a"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "xl": "40px",
+                        "container-max": "1200px",
+                        "md": "16px",
+                        "gutter": "24px",
+                        "sm": "8px",
+                        "base": "4px",
+                        "xs": "4px",
+                        "lg": "24px"
+                    },
+                    "fontFamily": {
+                        "display-lg": ["Inter"],
+                        "body-md": ["Inter"],
+                        "headline-md-mobile": ["Inter"],
+                        "headline-sm": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "headline-md": ["Inter"],
+                        "label-md": ["Inter"]
+                    },
+                    "fontSize": {
+                        "display-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }],
+                        "headline-md-mobile": ["20px", { "lineHeight": "28px", "fontWeight": "600" }],
+                        "headline-sm": ["20px", { "lineHeight": "28px", "fontWeight": "600" }],
+                        "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "headline-md": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; background-color: #f7f9fb; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+    </style>
+</head>
+<body class="bg-background text-on-background flex h-screen overflow-hidden">
+<!-- SideNavBar -->
+<nav class="bg-surface-container-low dark:bg-surface-container h-screen w-64 fixed left-0 top-0 border-r border-outline-variant dark:border-outline flex flex-col p-md gap-base z-20 hidden md:flex">
+<div class="mb-lg px-md pt-sm">
+<h1 class="text-headline-md font-headline-md text-primary dark:text-primary-fixed-dim font-bold tracking-tight">ProNetwork</h1>
+<p class="text-label-md font-label-md text-on-surface-variant mt-1">Professional CRM</p>
+</div>
+<div class="flex-1 space-y-sm">
+<a class="flex items-center gap-md text-on-surface-variant dark:text-on-secondary-container px-md py-sm hover:bg-surface-container-high dark:hover:bg-surface-container-highest rounded-xl transition-all" href="dashboard.html">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="text-label-md font-label-md">Contacts</span>
+</a>
+<a class="flex items-center gap-md text-on-surface-variant dark:text-on-secondary-container px-md py-sm hover:bg-surface-container-high dark:hover:bg-surface-container-highest rounded-xl transition-all" href="favorites.html">
+<span class="material-symbols-outlined" data-icon="star">star</span>
+<span class="text-label-md font-label-md">Favorites</span>
+</a>
+<a class="flex items-center gap-md bg-secondary-container dark:bg-primary-container text-on-secondary-container dark:text-on-primary-container rounded-xl px-md py-sm font-semibold translate-x-1 duration-200" href="trash.html">
+<span class="material-symbols-outlined" data-icon="delete" data-weight="fill" style="font-variation-settings: 'FILL' 1;">delete</span>
+<span class="text-label-md font-label-md">Trash</span>
+</a>
+</div>
+</nav>
+<!-- Main Content Area -->
+<div class="flex-1 flex flex-col md:ml-64 relative h-screen overflow-hidden">
+<!-- TopNavBar -->
+<header class="bg-surface dark:bg-surface-dim w-full h-16 border-b border-outline-variant dark:border-outline shadow-sm flex justify-between items-center px-lg shrink-0 z-10">
+<div class="flex items-center gap-lg w-full max-w-container-max mx-auto">
+<div class="md:hidden">
+<span class="text-headline-md-mobile font-headline-md-mobile font-bold text-primary dark:text-primary-fixed-dim">ProNetwork</span>
+</div>
+<div class="hidden md:flex flex-1"></div>
+<div class="flex-1 max-w-md relative hidden md:block">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-sm">search</span>
+<input class="w-full pl-10 pr-4 py-2 bg-surface-container-lowest border border-outline-variant rounded-full text-body-md font-body-md focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/10 transition-all" placeholder="Search trash..." type="text"/>
+</div>
+<div class="flex items-center gap-md ml-auto">
+<button class="p-2 text-on-surface-variant hover:bg-surface-container-low rounded-full transition-colors hidden md:block">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+<button class="p-2 text-on-surface-variant hover:bg-surface-container-low rounded-full transition-colors hidden md:block">
+<span class="material-symbols-outlined" data-icon="help">help</span>
+</button>
+<a href="addcontact.html" class="hidden md:flex items-center gap-sm bg-primary text-on-primary px-4 py-2 rounded-full text-label-md font-label-md font-semibold hover:bg-primary/90 transition-colors shadow-sm">
+<span class="material-symbols-outlined text-sm">add</span> Add Contact
+                    </a>
+<div class="w-8 h-8 rounded-full overflow-hidden border border-outline-variant bg-surface-container">
+<img alt="User profile" class="w-full h-full object-cover" data-alt="A professional corporate headshot of a person looking forward against a clean minimalist light gray background. The lighting is soft and even, highlighting a calm, dependable expression. Professional attire, modern light-mode aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAEc33cQW-bt3o1suD_fr7_R-3XlMjxGS9cvMVjImVd29k7MbBAMPJ5huAb8wMAG7mGQoe149yjyh-L_xj6P-KK7huNSo7k2oLc1UVbMHkWc9BdsHXbncInNYZLshrJJxzfy54SwMV2X9KIur5GikD-0kwX8F7prapDDD3upWdJtslTfURIvQBvMkqr1_wKYMxl5oWpP4IguXbWTZJZEBvUaeOTkT_JxnH5kxNCISm3gZBl28Co-qRuQ8hegydKvOJIC--iWmpRStJW"/>
+</div>
+</div>
+</div>
+</header>
+<!-- Content Canvas -->
+<main class="flex-1 overflow-y-auto p-md md:p-xl bg-background">
+<div class="max-w-container-max mx-auto h-full flex flex-col">
+<!-- Disclaimer Banner -->
+<div class="bg-error-container text-on-error-container px-lg py-md rounded-xl mb-lg flex items-start gap-md border border-error/20 shadow-sm shrink-0">
+<span class="material-symbols-outlined mt-0.5 text-error" data-icon="info">info</span>
+<div>
+<h2 class="text-body-lg font-body-lg font-semibold">Trash</h2>
+<p class="text-body-md font-body-md mt-1">Contacts in the trash will be permanently deleted after 30 days.</p>
+</div>
+<button class="ml-auto text-error hover:bg-error/10 p-1 rounded-full transition-colors">
+<span class="material-symbols-outlined text-sm" data-icon="close">close</span>
+</button>
+</div>
+<!-- Header Area -->
+<div class="flex justify-between items-end mb-lg shrink-0">
+<h2 class="text-display-lg font-display-lg text-on-background">Deleted Contacts</h2>
+<button id="emptyTrashBtn" onclick="emptyTrash()" class="text-error text-label-md font-label-md font-semibold hover:bg-error/10 px-4 py-2 rounded-lg transition-colors flex items-center gap-2">
+<span class="material-symbols-outlined text-sm" data-icon="delete_sweep">delete_sweep</span> Empty Trash
+                    </button>
+</div>
+<!-- Contact List (Bento-ish Grid) -->
+<div id="trashList" class="grid grid-cols-1 lg:grid-cols-2 gap-gutter pb-xl flex-1">
+</div>
+<!-- Empty state -->
+<div id="emptyState" class="hidden flex-col items-center justify-center text-center py-xl gap-md flex-1">
+<span class="material-symbols-outlined text-6xl text-outline-variant">delete</span>
+<p class="text-body-lg font-body-lg text-on-surface-variant">Trash is empty.</p>
+<p class="text-body-md font-body-md text-on-surface-variant">Deleted contacts will appear here for 30 days.</p>
+</div>
+</div>
+</main>
+</div>
+<script>
+    const TRASH_DAYS = 30;
+    const DAY_MS = 24 * 60 * 60 * 1000;
+
+    function getTrash() {
+        return JSON.parse(localStorage.getItem("trash") || "[]");
+    }
+    function setTrash(trash) {
+        localStorage.setItem("trash", JSON.stringify(trash));
+    }
+    function getContacts() {
+        return JSON.parse(localStorage.getItem("contacts") || "[]");
+    }
+
+    function escapeHtml(str) {
+        return String(str || "").replace(/[&<>"']/g, function (c) {
+            return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c];
+        });
+    }
+
+    function avatar(contact) {
+        if (contact.photo) {
+            return `<img src="${escapeHtml(contact.photo)}" alt="${escapeHtml(contact.name)}" class="w-full h-full object-cover grayscale opacity-80">`;
+        }
+        let initials = (contact.name || "?").trim().split(/\s+/).map(p => p[0]).slice(0, 2).join("").toUpperCase();
+        return `<div class="w-full h-full flex items-center justify-center bg-secondary-container text-on-secondary-container text-headline-sm font-headline-sm">${escapeHtml(initials)}</div>`;
+    }
+
+    // Remove items past the 30-day expiry whenever the page loads.
+    function purgeExpired() {
+        let now = Date.now();
+        let trash = getTrash();
+        let kept = trash.filter(c => (now - (c.deletedAt || now)) < TRASH_DAYS * DAY_MS);
+        if (kept.length !== trash.length) setTrash(kept);
+    }
+
+    function displayTrash() {
+        let trash = getTrash();
+        let trashList = document.getElementById("trashList");
+        let emptyState = document.getElementById("emptyState");
+        let emptyTrashBtn = document.getElementById("emptyTrashBtn");
+
+        if (!trash.length) {
+            trashList.classList.add("hidden");
+            emptyState.classList.remove("hidden");
+            emptyState.classList.add("flex");
+            emptyTrashBtn.classList.add("hidden");
+            return;
+        }
+
+        trashList.classList.remove("hidden");
+        emptyState.classList.add("hidden");
+        emptyState.classList.remove("flex");
+        emptyTrashBtn.classList.remove("hidden");
+        trashList.innerHTML = "";
+
+        trash.forEach((contact, index) => {
+            let daysElapsed = Math.floor((Date.now() - (contact.deletedAt || Date.now())) / DAY_MS);
+            let daysLeft = Math.max(0, TRASH_DAYS - daysElapsed);
+            let urgent = daysLeft <= 3;
+
+            let card = document.createElement("div");
+            card.className = "bg-surface-container-lowest border border-outline-variant rounded-xl p-lg shadow-sm hover:shadow-md transition-shadow flex flex-col relative group";
+            card.innerHTML = `
+                <div class="flex items-start gap-md">
+                    <div class="w-12 h-12 rounded-full overflow-hidden bg-surface-container shrink-0 border border-outline-variant">
+                        ${avatar(contact)}
+                    </div>
+                    <div class="flex-1 min-w-0">
+                        <h3 class="text-headline-sm font-headline-sm text-on-background line-through opacity-80">${escapeHtml(contact.name) || "Unnamed"}</h3>
+                        ${contact.company ? `<p class="text-body-md font-body-md text-on-surface-variant">${escapeHtml(contact.company)}</p>` : ""}
+                        ${contact.email ? `<p class="text-body-md font-body-md text-on-surface-variant mt-1 text-sm truncate"><span class="material-symbols-outlined text-xs align-middle">mail</span> ${escapeHtml(contact.email)}</p>` : ""}
+                        ${contact.phone ? `<p class="text-body-md font-body-md text-on-surface-variant mt-1 text-sm"><span class="material-symbols-outlined text-xs align-middle">call</span> ${escapeHtml(contact.phone)}</p>` : ""}
+                    </div>
+                </div>
+                <div class="mt-lg pt-md border-t border-surface-container flex justify-between items-center opacity-100 lg:opacity-0 group-hover:opacity-100 transition-opacity">
+                    <span class="text-label-md font-label-md ${urgent ? "text-error" : "text-on-surface-variant"} flex items-center gap-1">
+                        <span class="material-symbols-outlined text-sm">${urgent ? "warning" : "schedule"}</span> ${daysLeft} days left
+                    </span>
+                    <div class="flex gap-sm">
+                        <button onclick="restoreContact(${index})" class="text-body-md font-body-md font-semibold text-primary px-3 py-1.5 hover:bg-primary-container/20 rounded-lg transition-colors">Restore</button>
+                        <button onclick="deletePermanently(${index})" class="text-body-md font-body-md font-semibold text-error px-3 py-1.5 hover:bg-error-container/50 rounded-lg transition-colors">Delete</button>
+                    </div>
+                </div>
+            `;
+            trashList.appendChild(card);
+        });
+    }
+
+    function restoreContact(index) {
+        let trash = getTrash();
+        let restored = trash.splice(index, 1)[0];
+        if (!restored) return;
+        delete restored.deletedAt;
+        let contacts = getContacts();
+        contacts.push(restored);
+        localStorage.setItem("contacts", JSON.stringify(contacts));
+        setTrash(trash);
+        displayTrash();
+    }
+
+    function deletePermanently(index) {
+        if (!confirm("Permanently delete this contact? This cannot be undone.")) return;
+        let trash = getTrash();
+        trash.splice(index, 1);
+        setTrash(trash);
+        displayTrash();
+    }
+
+    function emptyTrash() {
+        if (!getTrash().length) return;
+        if (!confirm("Permanently delete all contacts in the trash? This cannot be undone.")) return;
+        setTrash([]);
+        displayTrash();
+    }
+
+    purgeExpired();
+    displayTrash();
+</script>
+</body></html>

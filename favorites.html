@@ -1,0 +1,303 @@
+<!DOCTYPE html><html class="light" lang="en"><head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>ContactHub - My Favorites</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+    <script id="tailwind-config">
+            tailwind.config = {
+              darkMode: "class",
+              theme: {
+                extend: {
+                  "colors": {
+                          "inverse-primary": "#b7c4ff",
+                          "on-surface-variant": "#434656",
+                          "primary-container": "#0052ff",
+                          "tertiary-fixed-dim": "#ffb4a1",
+                          "outline": "#737688",
+                          "primary-fixed": "#dde1ff",
+                          "on-secondary": "#ffffff",
+                          "surface-container-highest": "#e0e3e5",
+                          "on-secondary-fixed-variant": "#38485d",
+                          "surface-bright": "#f7f9fb",
+                          "on-surface": "#191c1e",
+                          "on-tertiary-container": "#ffddd5",
+                          "secondary-container": "#d0e1fb",
+                          "error-container": "#ffdad6",
+                          "surface-container-low": "#f2f4f6",
+                          "on-primary-container": "#dfe3ff",
+                          "on-error-container": "#93000a",
+                          "surface-container": "#eceef0",
+                          "surface-container-high": "#e6e8ea",
+                          "secondary-fixed-dim": "#b7c8e1",
+                          "surface-tint": "#004ced",
+                          "tertiary-fixed": "#ffdbd2",
+                          "on-primary-fixed": "#001452",
+                          "error": "#ba1a1a",
+                          "tertiary": "#952200",
+                          "on-background": "#191c1e",
+                          "inverse-on-surface": "#eff1f3",
+                          "surface-dim": "#d8dadc",
+                          "outline-variant": "#c3c5d9",
+                          "surface-container-lowest": "#ffffff",
+                          "on-secondary-fixed": "#0b1c30",
+                          "background": "#f7f9fb",
+                          "tertiary-container": "#bf3003",
+                          "on-tertiary-fixed-variant": "#891e00",
+                          "primary-fixed-dim": "#b7c4ff",
+                          "on-error": "#ffffff",
+                          "inverse-surface": "#2d3133",
+                          "on-secondary-container": "#54647a",
+                          "on-primary-fixed-variant": "#0038b6",
+                          "surface-variant": "#e0e3e5",
+                          "secondary-fixed": "#d3e4fe",
+                          "secondary": "#505f76",
+                          "on-primary": "#ffffff",
+                          "on-tertiary-fixed": "#3c0800",
+                          "primary": "#003ec7",
+                          "on-tertiary": "#ffffff",
+                          "surface": "#f7f9fb"
+                  },
+                  "borderRadius": {
+                          "DEFAULT": "0.125rem",
+                          "lg": "0.25rem",
+                          "xl": "0.5rem",
+                          "full": "0.75rem"
+                  },
+                  "spacing": {
+                          "sm": "8px",
+                          "xs": "4px",
+                          "gutter": "24px",
+                          "lg": "24px",
+                          "md": "16px",
+                          "xl": "40px",
+                          "base": "4px",
+                          "container-max": "1200px"
+                  },
+                  "fontFamily": {
+                          "headline-sm": [ "Inter" ],
+                          "headline-md": [ "Inter" ],
+                          "label-md": [ "Inter" ],
+                          "body-md": [ "Inter" ],
+                          "headline-md-mobile": [ "Inter" ],
+                          "display-lg": [ "Inter" ],
+                          "body-lg": [ "Inter" ]
+                  },
+                  "fontSize": {
+                          "headline-sm": [ "20px", { "lineHeight": "28px", "fontWeight": "600" } ],
+                          "headline-md": [ "24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600" } ],
+                          "label-md": [ "12px", { "lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600" } ],
+                          "body-md": [ "14px", { "lineHeight": "20px", "fontWeight": "400" } ],
+                          "headline-md-mobile": [ "20px", { "lineHeight": "28px", "fontWeight": "600" } ],
+                          "display-lg": [ "32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" } ],
+                          "body-lg": [ "16px", { "lineHeight": "24px", "fontWeight": "400" } ]
+                  }
+                },
+              },
+            }
+        </script>
+    <style>
+            .contact-row-actions {
+                opacity: 0;
+                transition: opacity 0.2s ease-in-out;
+            }
+            .contact-row:hover .contact-row-actions {
+                opacity: 1;
+            }
+        </style>
+    </head>
+    <body class="bg-background text-on-background font-body-md min-h-screen flex">
+    <!-- SideNavBar -->
+    <nav class="hidden lg:flex flex-col h-screen w-64 fixed left-0 top-0 py-lg px-md gap-lg bg-surface-bright border-r border-surface-container-low transition-all duration-200 ease-in-out z-40">
+    <!-- Header -->
+    <div class="flex items-center gap-md px-md">
+    <div class="w-10 h-10 rounded-lg bg-primary text-on-primary flex items-center justify-center font-headline-sm text-headline-sm">P</div>
+    <div>
+    <h1 class="font-headline-sm text-headline-sm font-black text-on-surface">ProNetwork</h1>
+    <p class="font-label-md text-label-md text-on-surface-variant">Enterprise Edition</p>
+    </div>
+    </div>
+    <!-- Main Nav -->
+    <div class="flex-1 flex flex-col gap-sm mt-xl">
+    <!-- Inactive: Contacts -->
+    <a class="flex items-center gap-md text-on-surface-variant px-md py-sm transition-all duration-200 ease-in-out hover:bg-surface-container-highest rounded-full cursor-pointer active:opacity-80" href="dashboard.html">
+    <span class="material-symbols-outlined">group</span>
+    <span class="font-label-md text-label-md">Contacts</span>
+    </a>
+    <!-- Active: Favorites -->
+    <a class="flex items-center gap-md bg-secondary-container text-on-secondary-container rounded-full px-md py-sm transition-all duration-200 ease-in-out hover:bg-surface-container-highest cursor-pointer active:opacity-80" href="favorites.html">
+    <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+    <span class="font-label-md text-label-md">Favorites</span>
+    </a>
+    </div>
+    <!-- Footer Nav -->
+    <div class="flex flex-col gap-sm pt-md border-t border-surface-container-low">
+    <a class="flex items-center gap-md text-on-surface-variant px-md py-sm transition-all duration-200 ease-in-out hover:bg-surface-container-highest rounded-full cursor-pointer active:opacity-80" href="trash.html">
+    <span class="material-symbols-outlined">delete</span>
+    <span class="font-label-md text-label-md">Trash</span>
+    </a>
+    </div>
+    </nav>
+    <!-- Main Content Wrapper -->
+    <div class="flex-1 flex flex-col min-w-0 lg:ml-64">
+    <!-- TopNavBar -->
+    <header class="flex justify-between items-center w-full px-gutter py-md sticky top-0 z-50 bg-surface-container-lowest shadow-sm">
+    <!-- Mobile Brand (hidden on lg) -->
+    <div class="lg:hidden flex items-center gap-md">
+    <span class="font-headline-md-mobile text-headline-md-mobile font-bold text-primary">ContactHub</span>
+    </div>
+    <!-- Search -->
+    <div class="flex-1 max-w-xl hidden md:flex items-center">
+    <div class="relative w-full">
+    <span class="material-symbols-outlined absolute left-sm top-1/2 -translate-y-1/2 text-outline">search</span>
+    <input class="w-full pl-xl pr-md py-sm bg-surface-bright border border-outline-variant rounded-full font-body-md text-on-surface focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/10 transition-all" placeholder="Search contacts..." type="text">
+    </div>
+    </div>
+    <!-- Mobile Search Icon -->
+    <button class="md:hidden p-sm text-on-surface-variant">
+    <span class="material-symbols-outlined">search</span>
+    </button>
+    <!-- Actions -->
+    <div class="flex items-center gap-md">
+    <button class="hidden md:flex p-sm text-on-surface-variant hover:bg-surface-container-low rounded-full transition-colors">
+    <span class="material-symbols-outlined">settings</span>
+    </button>
+    <button class="hidden md:flex p-sm text-on-surface-variant hover:bg-surface-container-low rounded-full transition-colors">
+    <span class="material-symbols-outlined">help</span>
+    </button>
+    <a href="addcontact.html" class="flex items-center gap-sm bg-primary text-on-primary px-md py-sm rounded-full font-label-md text-label-md hover:bg-on-primary-fixed-variant transition-colors shadow-sm">
+    <span class="material-symbols-outlined text-[18px]">add</span>
+    <span class="hidden sm:inline">Add Contact</span>
+    </a>
+    </div>
+    </header>
+    <!-- Page Content -->
+    <main class="flex-1 p-gutter max-w-container-max mx-auto w-full">
+    <div class="mb-xl flex justify-between items-end">
+    <div>
+    <h2 class="font-display-lg text-display-lg text-on-surface mb-xs">My Favorites</h2>
+    <p class="font-body-lg text-body-lg text-on-surface-variant">Your favorite contacts, all in one place.</p>
+    </div>
+    </div>
+    <!-- Favorites Grid layout -->
+    <div id="contactList" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-lg">
+    </div>
+    <!-- Empty state -->
+    <div id="emptyState" class="hidden flex-col items-center justify-center text-center py-xl gap-md">
+    <span class="material-symbols-outlined text-6xl text-outline-variant">star</span>
+    <p class="font-body-lg text-body-lg text-on-surface-variant">No favorite contacts yet.</p>
+    <p class="font-body-md text-on-surface-variant">Tap the star on a contact to add it here.</p>
+    <a href="dashboard.html" class="flex items-center gap-sm bg-primary text-on-primary px-md py-sm rounded-full font-label-md text-label-md hover:bg-on-primary-fixed-variant transition-colors shadow-sm">
+    <span class="material-symbols-outlined text-[18px]">group</span> Browse contacts
+    </a>
+    </div>
+    </main>
+    </div>
+    </body>
+    <script>
+        function getContacts() {
+            let stored = localStorage.getItem("contacts");
+            return stored ? JSON.parse(stored) : [];
+        }
+
+        function escapeHtml(str) {
+            return String(str || "").replace(/[&<>"']/g, function (c) {
+                return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c];
+            });
+        }
+
+        function avatar(contact) {
+            if (contact.photo) {
+                return `<img src="${escapeHtml(contact.photo)}" alt="${escapeHtml(contact.name)}" class="w-16 h-16 rounded-full object-cover">`;
+            }
+            let initials = (contact.name || "?").trim().split(/\s+/).map(p => p[0]).slice(0, 2).join("").toUpperCase();
+            return `<div class="w-16 h-16 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center font-headline-sm text-headline-sm">${escapeHtml(initials)}</div>`;
+        }
+
+        function displayFavorites() {
+            let contacts = getContacts();
+            // keep each favorite's real index so actions map to the right contact
+            let favorites = contacts
+                .map((contact, index) => ({ contact, index }))
+                .filter(item => item.contact.favorite);
+
+            let contactList = document.getElementById("contactList");
+            let emptyState = document.getElementById("emptyState");
+
+            if (!favorites.length) {
+                contactList.classList.add("hidden");
+                emptyState.classList.remove("hidden");
+                emptyState.classList.add("flex");
+                return;
+            }
+
+            contactList.classList.remove("hidden");
+            emptyState.classList.add("hidden");
+            emptyState.classList.remove("flex");
+            contactList.innerHTML = "";
+
+            favorites.forEach(({ contact, index }) => {
+                let card = document.createElement("div");
+                card.className = "contact-row bg-surface-container-lowest rounded-xl border border-surface-container-high shadow-sm p-lg flex flex-col gap-md relative transition-shadow hover:shadow-md cursor-default";
+                card.innerHTML = `
+                    <div class="flex justify-between items-start">
+                        ${avatar(contact)}
+                        <div class="contact-row-actions flex gap-sm">
+                            <button onclick="toggleFavorite(${index})" class="p-xs text-primary hover:bg-surface-container-high rounded-full transition-colors" title="Remove from favorites">
+                                <span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                            </button>
+                            <button onclick="editContact(${index})" class="p-xs text-on-surface-variant hover:text-primary hover:bg-surface-container-high rounded-full transition-colors" title="Edit">
+                                <span class="material-symbols-outlined text-[20px]">edit</span>
+                            </button>
+                            <button onclick="deleteContact(${index})" class="p-xs text-on-surface-variant hover:text-error hover:bg-error-container rounded-full transition-colors" title="Delete">
+                                <span class="material-symbols-outlined text-[20px]">delete</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div>
+                        <p class="font-headline-sm text-headline-sm text-on-surface">${escapeHtml(contact.name) || "Unnamed"}</p>
+                        ${contact.company ? `<div class="flex gap-xs mt-xs">
+                            <span class="px-sm py-[2px] bg-[#F1F5F9] text-secondary rounded-full font-label-md text-[10px]">${escapeHtml(contact.company)}</span>
+                        </div>` : ""}
+                    </div>
+                    <div class="flex flex-col gap-sm pt-md border-t border-surface-container-low mt-auto">
+                        ${contact.phone ? `<div class="font-body-md text-on-surface-variant flex items-center gap-sm">
+                            <span class="material-symbols-outlined text-[16px]">phone</span> ${escapeHtml(contact.phone)}
+                        </div>` : ""}
+                        ${contact.email ? `<div class="font-body-md text-on-surface-variant flex items-center gap-sm truncate">
+                            <span class="material-symbols-outlined text-[16px]">mail</span> ${escapeHtml(contact.email)}
+                        </div>` : ""}
+                    </div>
+                `;
+                contactList.appendChild(card);
+            });
+        }
+
+        function toggleFavorite(index) {
+            let contacts = getContacts();
+            contacts[index].favorite = !contacts[index].favorite;
+            localStorage.setItem("contacts", JSON.stringify(contacts));
+            displayFavorites();
+        }
+
+        function editContact(index) {
+            window.location.href = "edit.html?index=" + index;
+        }
+
+        function deleteContact(index) {
+            if (!confirm("Move this contact to trash?")) return;
+            let contacts = getContacts();
+            let removed = contacts.splice(index, 1)[0];
+            removed.deletedAt = Date.now();
+            let trash = JSON.parse(localStorage.getItem("trash") || "[]");
+            trash.push(removed);
+            localStorage.setItem("trash", JSON.stringify(trash));
+            localStorage.setItem("contacts", JSON.stringify(contacts));
+            displayFavorites();
+        }
+
+        displayFavorites();
+    </script>
+    </html>
