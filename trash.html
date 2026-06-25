@@ -172,7 +172,7 @@
 </div>
 <!-- Header Area -->
 <div class="flex justify-between items-end mb-lg shrink-0">
-<h2 class="text-display-lg font-display-lg text-on-background">Deleted Contacts</h2>
+<h2 class="text-display-lg font-display-lg text-on-background">Deleted Contacts (<span id="trashCount"></span>)</h2>
 <button id="emptyTrashBtn" onclick="emptyTrash()" class="text-error text-label-md font-label-md font-semibold hover:bg-error/10 px-4 py-2 rounded-lg transition-colors flex items-center gap-2">
 <span class="material-symbols-outlined text-sm" data-icon="delete_sweep">delete_sweep</span> Empty Trash
                     </button>
@@ -275,6 +275,7 @@
                 </div>
             `;
             trashList.appendChild(card);
+            document.getElementById("trashCount").textContent = (trash.length);
         });
     }
 
