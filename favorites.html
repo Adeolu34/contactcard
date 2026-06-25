@@ -177,7 +177,7 @@
     <main class="flex-1 p-gutter max-w-container-max mx-auto w-full">
     <div class="mb-xl flex justify-between items-end">
     <div>
-    <h2 class="font-display-lg text-display-lg text-on-surface mb-xs">My Favorites</h2>
+    <h2 class="font-display-lg text-display-lg text-on-surface mb-xs">My Favorites (<span id="favoriteCount"></span>)</h2>
     <p class="font-body-lg text-body-lg text-on-surface-variant">Your favorite contacts, all in one place.</p>
     </div>
     </div>
@@ -272,6 +272,7 @@
                     </div>
                 `;
                 contactList.appendChild(card);
+                document.getElementById("favoriteCount").textContent = (favorites.length);
             });
         }
 
